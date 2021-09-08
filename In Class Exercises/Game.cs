@@ -10,6 +10,9 @@ namespace In_Class_Exercises
         {
             int[] testArray = new int[] { 1, 2, 3, 4, 5 };
             PrintNumbers(testArray, 5);
+
+            int[] minMaxArray = new int[] { 1, 2, 3 };
+            PrintMaxAndMin(minMaxArray);
         }
 
         void PrintNumbers(int[] numbers, int size)
@@ -29,5 +32,14 @@ namespace In_Class_Exercises
                 Console.WriteLine(arr[i]);
             }
         }
+
+        void PrintMaxAndMin(int[] numbers)
+        {
+            foreach (int i in numbers)
+            {
+                Console.WriteLine(i);                 
+            }    
+        }
+    
     }
 }
