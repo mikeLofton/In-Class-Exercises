@@ -48,7 +48,7 @@ namespace In_Class_Exercises
                     largest = numbers[i];
                 }
 
-                if (numbers[i] < smallest)
+                else if (numbers[i] < smallest)
                 {
                     smallest = numbers[i];
                 }
