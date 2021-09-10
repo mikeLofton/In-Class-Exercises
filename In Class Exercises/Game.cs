@@ -15,6 +15,7 @@ namespace In_Class_Exercises
             PrintMaxAndMin(minMaxArray);
         }
 
+        //How I did it
         void PrintNumbers(int[] numbers, int size)
         {
 
@@ -25,6 +26,7 @@ namespace In_Class_Exercises
             Console.ReadKey();
         }
 
+        //How Lodis did it
         void PrintArray(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
@@ -33,12 +35,36 @@ namespace In_Class_Exercises
             }
         }
 
+        //Max and Min Exercise
         void PrintMaxAndMin(int[] numbers)
         {
-            foreach (int i in numbers)
+            int largest = numbers[0];
+            int smallest = numbers[0];
+
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine(i);                 
-            }    
+                if (numbers[i] > largest)
+                {
+                    largest = numbers[i];
+                }
+
+                if (numbers[i] < smallest)
+                {
+                    smallest = numbers[i];
+                }
+            }
+
+            Console.WriteLine("Largest: " + largest);
+            Console.WriteLine("Smallest " + smallest);
+        }
+
+        //For Each Example
+        void ExamplePrint (int[] arr)
+        {
+            foreach (int i in arr)
+            {
+                Console.WriteLine(i);
+            }
         }
     
     }
