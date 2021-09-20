@@ -8,11 +8,15 @@ namespace In_Class_Exercises
     {
         public void Run()
         {
+            int[] numbers = new int[] { 1, 2, 3, 4 };
+
+            numbers = AppendToArray(numbers, 5);
+
             int[] testArray = new int[] { 1, 2, 3, 4, 5 };
             PrintNumbers(testArray, 5);
 
             int[] minMaxArray = new int[] { 1, 2, 3 };
-            PrintMaxAndMin(minMaxArray);
+            PrintMaxAndMin(minMaxArray);                     
         }
 
         //How I did it
@@ -65,6 +69,24 @@ namespace In_Class_Exercises
             {
                 Console.WriteLine(i);
             }
+        }
+
+        int[] AppendToArray(int [] arr, int value)
+        {
+            //Create a new array with one more slot than the old array
+            int[] tempArray = new int[arr.Length + 1];
+
+            //Copy the values from the old array into a new array
+            for (int i = 0; i < arr.Length; i++)
+            {
+                tempArray[i] = arr[i];
+            }
+
+            //Set the last index to be the new item
+            tempArray[tempArray.Length - 1] = value;
+
+            //Return the new array
+            return tempArray;
         }
     
     }
